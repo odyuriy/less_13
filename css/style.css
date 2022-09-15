@@ -1,0 +1,1181 @@
+.main {
+    color: #1B1D1F;
+    background: linear-gradient(270deg, #A5DEFF 0%, #FCFEFF 100%);
+    width: 1200px;
+    margin: 50px auto;
+    padding: 10px 30px 20px;
+    border: 10px solid #A5DEFF;
+    line-height: 24px;
+    text-align: center;
+    box-sizing: border-box;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* LESSON_10 -- MENU */
+.menu__list {
+    text-align: center;
+    font-size: 0;
+    z-index: 5; /* BLOCK_MENU -- ANIMATION*/
+}
+
+.menu__list li {
+    display: inline-block;
+    font-size: 25px;
+    background: #f63;
+    position: relative;
+}
+
+.menu__list li a:hover {
+    color: #004282;
+    background: #f96;
+}
+
+/* ВЫПАДАЮЩЕЕ МЕНЮ -- УРОК 12*/
+.menu__list li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 20px 20px 6px 53px;
+    display: block;
+    position: relative;
+}
+
+.menu__list>li>a:before {
+    content: "";
+    width: 50px;
+    height: 50px;
+    background: url('../images/css_sprites_new1.png');
+    position: absolute;
+    top: 0;
+}
+
+.menu__list>.menuhome>.menu__link:before {
+    background-position: -50px -100px;
+    left: 0;
+}
+
+.menu__list>.menugallary>.menu__link:before {
+    background-position: -0px -100px;
+    left: 0;
+}
+
+.menu__list>.menublocks a {
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 20px 53px 6px 20px;
+    display: block;
+    position: relative;
+}
+
+.menu__list>.menublocks>.menu__link:before {
+    background-position: -100px -150px;
+    right: 0;
+}
+.menu__list>.menublocks:hover a:before {
+    background-position: -100px -100px;
+}
+
+/* BLOCK_MENU -- ANIMATION*/
+.mainLaptops, h1 {
+    position: relative;
+    z-index: 10;
+}
+
+.menu__list .block_list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+.menublocks:hover .block_list {
+    opacity: 1;
+    padding: 20px 10px;
+    transition: all 1s ease;
+    z-index: 15;  /* BLOCK_MENU -- ANIMATION*/
+}
+
+.block_list li {
+    min-width: 150px;
+}
+
+.float_list {
+    position: absolute;
+    right: 100%;
+    top: -800%;
+    transition: all 3s ease;
+}
+.floats:hover .float_list {
+    top: 0;
+    transition: top 1s ease, padding 3s ease;
+    padding: 0px 3px;
+}
+
+.grid_list {
+    position: absolute;
+    left: 100%;
+    top: 10900%;
+    padding-left: 15px;
+    transition: all 7s ease;
+}
+.grids:hover .grid_list {
+    top: 0;
+    padding: 0px 3px;
+    transition: .75s top ease, padding 2s ease;
+}
+
+/* BLOCK_MENU -- ANIMATION (END)*/
+
+/* FLOAT */
+.menu__list>.menublocks>.block_list>.floats>a {
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 20px 20px 6px 0px;
+    display: block;
+    position: relative;
+}
+
+.menu__list>.menublocks>.block_list>.floats>a:before {
+    content: "";
+    width: 50px;
+    height: 50px;
+    background: url('../images/css_sprites_new1.png');
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.menu__list>.menublocks>.block_list>.floats>.sub_menu__link:before {
+    background-position: -150px -150px;
+}
+
+.menu__list>.menublocks>.block_list>.floats:hover a:before {
+    background-position: -150px -100px;
+}
+
+
+/* GRID */
+.menu__list>.menublocks>.block_list>.grids>a {
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 20px 53px 6px 20px;
+    display: block;
+    position: relative;
+}
+
+.menu__list>.menublocks>.block_list>.grids>a:before {
+    content: "";
+    width: 50px;
+    height: 50px;
+    background: url('../images/css_sprites_new1.png');
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.menu__list>.menublocks>.block_list>.grids>.sub_menu__link:before {
+    background-position: -150px -100px;
+}
+
+.menu__list>.menublocks>.block_list>.grids:hover a:before {
+    background-position: -150px -150px;
+}
+
+.menu__list li+li {
+    border-left: 2px solid #2b8dc7;
+}
+
+.menu__list ul a {
+    background: #369;
+}
+.menu__list ul a:hover {
+    background: #69e;
+}
+
+.menu__link {
+    color: whitesmoke;
+}
+
+.block_list a {
+    color: wheat;
+}
+
+.float_list li a {
+    color: greenyellow;
+}
+
+.grid_list li a {
+    color: lightgreen;
+}
+
+.menu__list li:hover .block_list {
+    height: auto;
+}
+
+.menu__list .block_list li {
+    border: 0;
+}
+
+
+/* F O O T E R  -- CONTACTS*/
+.menu_contacts {
+    font-size: 0;
+    text-align: right;
+}
+
+.menu_contacts li {
+    display: inline-block;
+    font-size: 24px;
+
+}
+
+.menu_contacts li a {
+    width: 50px;
+    height: 50px;
+    display: block;
+    background: url('../images/css_sprites_new1.png');
+    transition: all .3s ease;
+}
+
+.menu_contacts li+li a {
+    background-position: -50px 0px;
+}
+
+.menu_contacts li+li+li a {
+    background-position: -100px 0px;
+}
+
+.menu_contacts li+li+li+li a {
+    background-position: -150px 0px;
+}
+
+.menu_contacts li+li+li+li+li a {
+    background-position: -200px 0px;
+}
+
+.menu_contacts li+li+li+li+li+li a {
+    background-position: -250px 0px;
+}
+
+/* hover */
+.menu_contacts li:hover a {
+    background-position: 0 -50px;
+}
+
+.menu_contacts li+li:hover a {
+    background-position: -50px -50px;
+}
+
+.menu_contacts li+li+li:hover a {
+    background-position: -100px -50px;
+}
+
+.menu_contacts li+li+li+li:hover a {
+    background-position: -150px -50px;
+}
+
+.menu_contacts li+li+li+li+li:hover a {
+    background-position: -200px -50px;
+}
+
+.menu_contacts li+li+li+li+li+li:hover a {
+    background-position: -250px -50px;
+}
+
+
+
+
+
+/* FIRST_PAGE */
+div div div div>p {
+    color: #2b8dc7;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+div>div>p {
+    text-align: center;
+    width: 900px;
+    margin: 0 auto;
+    font-weight: 500;
+}
+
+h1 {
+    font-weight: 800;
+    font-size: 32px;
+    padding-top: 50px;
+}
+
+h2 {
+    text-align: center;
+    font-weight: 800;
+    font-size: 24px;
+    padding-top: 40px;
+}
+
+.italic {
+    font-style: italic;
+    padding: 20px;
+}
+
+h3 {
+    font-weight: 800;
+    font-size: 18px;
+    padding-top: 10px;
+}
+
+h3 span {
+    color: #1B1D1F;
+}
+
+.mainDesktop {
+    padding: 20px;
+}
+
+.mainLaptops.laptops.desktop {
+    padding: 10px;
+}
+
+.mainLaptops.mainDesktop {
+    margin: 0 auto;
+}
+
+.bigger {
+    font-size: 20px;
+}
+
+.smaller {
+    font-size: 14px;
+}
+
+.img_center {
+    text-align: center;
+}
+
+img {
+    width: 200px;
+}
+
+.asus_rog {
+    width: 213px;
+}
+
+.dell_xps_platinum {
+    height: 145px;
+}
+
+.dell_xps {
+    width: 200px;
+}
+
+a {
+    color: #004282;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* .color_info {
+    color: #004282;
+    font-size: 14px;
+    font-weight: 600;
+} */
+
+.contacts {
+    padding-top: 30px;
+}
+
+.mail {
+    padding-left: 10px;
+}
+
+.lesson_6, .lesson_7 {
+    padding-top: 10px;
+}
+
+
+/* LESSON_6__t_cell__in_block */
+
+/* T_CELL */
+.wrapper {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 15px 0;
+    border: 5px solid chocolate;
+}
+
+.one,
+.two,
+.three,
+.four {
+    padding: 15px 0;
+    background: lightseagreen;
+    margin-top: 50px;
+}
+
+
+.all_t_cell, .all_in_block, .all_float {
+    outline: 3px solid chocolate;
+}
+
+.one_400p,
+.two_800p,
+.two_400p,
+.three_600p,
+.three_600l,
+.three_600r,
+.thlb,
+.four_700l,
+.fhlb,
+.fhlb_350p,
+.four_500r {
+    display: table-cell;
+}
+
+.one_400p {
+    width: 400px;
+    background: lightyellow;
+    text-align: center;
+    font-size: 25px;
+}
+
+/* TWO */
+
+.two_800p {
+    width: 800px;
+}
+
+.two_800pl {
+    background: lightslategray;
+}
+
+.two_400p {
+    width: 400px;
+}
+
+.two_400pr {
+    background: lightyellow;
+    font-size: 18px;
+    text-align: justify;
+}
+
+/* THREE */
+
+.three_600l {
+    width: 600px;
+}
+
+.three_l_top {
+    background: rgb(50, 130, 205);
+    text-align: center;
+}
+
+.three_l_bottom {
+    background: rgb(219, 138, 219);
+}
+
+.three_600r {
+    background: rgb(119, 206, 130);
+    width: 600px;
+}
+
+/* FOUR */
+
+.four_700l {
+    width: 700px;
+}
+
+.four_l_top {
+    background: rgb(169, 200, 228);
+    text-align: center;
+}
+
+.four_l_bottom {
+    background: rgb(219, 138, 219);
+}
+
+.fhlb_350pr {
+    width: 350px;
+    background: lightcyan;;
+}
+
+.fhlb_350p_end {
+    background: lightgrey;
+    text-align: justify;
+}
+
+.four_500r {
+    background: rgb(20, 202, 132);
+    width: 500px;
+}
+
+
+/* IN_BLOCK */
+.inb_one, .inb_two, .inb_three, .inb_four {
+    padding: 15px 0;
+    background: lightseagreen;
+    font-size: 0;
+    margin-top: 50px;
+}
+
+.one_in_400p, .two_inb_800p, .two_inb_400p,
+.three_inb_600p, .three_inb_300pbl, .three_600pr,
+.four_inb_700p, .four_inb_350pbl, .four_inb_350pbr, .four_inb_500pr {
+    display: inline-block;
+}
+
+.one_in_400p {
+    width: 400px;
+    background: rgb(208, 255, 0);
+    font-size: 30px;
+}
+
+/* TWO */
+.two_inb_800p {
+    width: 800px;
+    font-size: 15px;
+}
+
+.two_inb_800pl {
+    background: yellow;
+}
+
+.two_inb_400p {
+    width: 400px;
+    font-size: 15px;
+}
+
+.two_inb_400pr {
+    background: rgb(133, 219, 107);
+}
+
+/* THREE */
+.three_inb_600p {
+    width: 600px;
+}
+
+.three_inb_600ptl {
+    background: rgb(65, 133, 44);
+    font-size: 20px;
+    text-align: justify;
+}
+
+.three_inbl_bottom {
+    background: rgb(104, 204, 134);
+}
+
+.three_inb_300pbl {
+    width: 300px;
+    font-size: 15px;
+    text-align: center;
+}
+
+.three_600pr {
+    width: 600px;
+    background: rgb(153, 196, 140);
+    font-size: 17px;
+    text-align: justify;
+}
+
+/* FOUR */
+.four_inb_700p {
+    width: 700px;
+}
+
+.four_inbl_700pt {
+    background: rgb(119, 118, 185);
+    font-size: 21px;
+    text-align: justify;
+}
+
+.four_inb_350pbl {
+    width: 350px;
+    background: rgb(219, 107, 210);
+    font-size: 15px;
+    text-align: center;
+}
+
+.four_inb_350pbr {
+    width: 350px;
+}
+
+.four_inb_350p_end {
+    background: rgb(207, 177, 203);
+    font-size: 15px;
+    text-align: center;
+}
+
+.four_inb_500pr {
+    width: 500px;
+    background: rgb(97, 201, 65);
+    font-size: 20px;
+    text-align: justify;
+}
+
+/* MENU -- T_CELL + IN_BLOCK */
+
+.home {
+    margin: 0 auto;
+    padding: 15px 0;
+    border: 5px solid coral;
+    text-align: justify;
+}
+
+.h_one {
+    padding: 15px 0;
+    width: 150px;
+    text-align: center;
+    outline: 2px solid green;
+    background: lightseagreen;
+    display: inline-block;
+}
+
+.h_two {
+    padding: 15px 0;
+    outline: 2px solid green;
+    background: rgb(134, 178, 32);
+    display: inline-block;
+}
+
+.h_three {
+    padding: 0;
+    background: none;
+    /* color: brown;
+    text-align: center; */
+    height: 0;
+    width: 100%;
+    display: inline-block;
+}
+
+
+/* LESSON_7__FLOAT__BEFORE/AFTER */
+
+/* FLOAT */
+.one_float {
+    width: 400px;
+    background: lightyellow;
+    text-align: center;
+    font-size: 25px;
+}
+
+.two_400prf {
+    background: lightyellow;
+    font-size: 15px;
+    text-align: justify;
+}
+
+.three_lt_float {
+    background: lightyellow;
+    text-align: center;
+}
+
+.thlbf {
+    width: 300px;
+    background: lightgrey;
+}
+
+.four_lt_float {
+    background: lightyellow;
+    text-align: center;
+}
+
+.fhlb_end_float {
+    width: 350px;
+}
+
+.floatleft {
+    float: left;
+}
+
+.floatright {
+    float: right;
+}
+
+.bottomFloat {
+    clear: both;
+    height: 10px;
+    background: green;
+}
+
+span {
+    color: red;
+    font-size: 36px;
+}
+
+/* MENU BUTTON */
+
+.float_home_ {
+    margin: 0 auto;
+    padding: 15px 0;
+    text-align: justify;
+}
+
+.float_h_one {
+    padding: 15px 0;
+    width: 150px;
+    text-align: center;
+    outline: 2px solid green;
+    background: lightpink;
+}
+
+.float_h_two {
+    padding: 15px 0;
+    outline: 2px solid green;
+    background: lightpink;
+}
+
+
+/* BEFORE/AFTER */
+.clearfix:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.all_class {
+    outline: 2px solid red;
+    background: lightyellow;
+}
+
+.one_float>span,
+.two_lf>span,
+.two_rf>span,
+.three_lt_float>span,
+.thlbf>span,
+.three_right_float>span,
+.four_lt_float>span,
+.fhlb_float>span,
+.fhlb_end_end_float>span,
+.four_right_float>span {
+    color: green;
+    font-size: 36px;
+}
+.one_in_float,
+.two_in_float,
+.three_float,
+four_float{
+    margin-top: 50px;
+}
+
+.one_in_float {
+    padding: 15px 0;
+    background: lightsalmon;
+}
+
+.one_float {
+    width: 400px;
+    text-align: center;
+    font-size: 25px;
+}
+
+.two_in_float {
+    background: lightsalmon;
+}
+
+.two_left_float {
+    width: 800px;
+}
+
+.two_right_float {
+    width: 400px;
+}
+
+.two_rf {
+    font-size: 15px;
+    text-align: justify;
+}
+
+.three_float {
+    background: lightsalmon;
+    padding: 15px 0;
+}
+
+.three_left_float {
+    width: 600px;
+}
+
+.three_lt_float {
+    text-align: center;
+}
+
+.thlbf {
+    width: 300px;
+}
+
+.three_right_float {
+    width: 600px;
+}
+
+.four_float {
+    background: lightsalmon;
+    padding: 15px 0;
+}
+
+.four_left_float {
+    width: 700px;
+}
+
+.four_lt_float {
+    text-align: center;
+}
+
+.fhlb_float {
+    width: 350px;
+}
+
+.fhlb_end_float {
+    width: 350px;
+}
+
+.fhlb_end_end_float {
+    text-align: justify;
+}
+
+.four_right_float {
+    width: 500px;
+}
+
+/* MENU BUTTON */
+
+.before_home {
+    margin: 0 auto;
+    padding: 15px 0;
+    text-align: justify;
+}
+
+.before_h_one {
+    padding: 15px 0;
+    width: 150px;
+    text-align: center;
+    outline: 2px solid green;
+    background: lightpink;
+    float: left;
+}
+
+.before_h_two {
+    padding: 15px 0;
+    outline: 2px solid green;
+    background: lightpink;
+}
+
+.floatleft {
+    float: left;
+}
+
+.floatright {
+    float: right;
+}
+
+/* LESSON_8_FLEX + GRID */
+/* FLEX */
+.clearfix:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.all_class {
+    outline: 2px solid red;
+    background: lightyellow;
+}
+
+.main_fflex {
+    display: flex;
+    background: lightslategray;
+    padding: 10px 0;
+    margin-top: 50px;
+}
+
+.main_fflex span {
+    color: red;
+    font-size: 40px;
+    background: lightseagreen;
+}
+
+.in_flex {
+    display: inline-flex;
+}
+
+.flex_p2 {
+    flex: 0 1 800px;
+    /* flex-basis: 800px; */
+}
+
+.flex_p22 {
+    flex: 3 1;
+    /* flex-basis: 400px; */
+}
+
+.flex_p3 {
+    flex: 1 1;
+}
+
+.flex_p4_l {
+    flex: 0 1 700px;
+    /* flex-basis: 700px; */
+}
+
+.flex_p4_b {
+    flex-basis: 350px;
+}
+
+.flex_p4_r {
+    flex-basis: 500px;
+}
+
+
+/* BUTTON */
+.home_flex {
+    background: lightslategray;
+}
+
+.home_grid {
+    background: #2b8dc7;
+}
+
+.button_left {
+    padding: 15px 0;
+    width: 150px;
+    text-align: center;
+    background: lightpink;
+    float: left;
+    border-radius: 3px;
+}
+
+.button_right {
+    padding: 15px 0;
+    background: lightpink;
+    float: right;
+    border-radius: 3px;
+}
+
+
+/* GRID_1 */
+.main_grid {
+    display: grid;
+    padding: 10px 0;
+    background: #2b8dc7;
+    margin-top: 50px;
+}
+
+.main_grid span {
+    color: red;
+    font-size: 40px;
+    background: lightseagreen;
+}
+
+.one_grid {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.two_grid {
+    grid-template-columns: 800px 400px;
+}
+
+.three_grid {
+    grid-template-columns: 600px auto;
+
+}
+
+.three_grid_bottom {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.four_grid {
+    grid-template-columns: 700px auto;
+}
+
+.four_grid_bottom {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+
+/* GRID_2 */
+.all_class_grid2 {
+    outline: 2px solid black;
+    background: gainsboro;
+}
+
+.main_grid2 span {
+    font-size: 36px;
+    background: lightseagreen;
+}
+
+.main_grid2 {
+    display: grid;
+    margin-top: 50px;
+    grid-template-columns: repeat(12, 100px);
+    grid-template-rows: repeat(20, 40px);
+    grid-template-areas:
+        "A A A A      B B B B     C C C C"
+        "A A A A      B B B B     C C C C"
+        "A A A A      B B B B     C C C C"
+        "A A A A      B B B B     C C C C"
+        "D D D D      D D D D     E E E E"
+        "D D D D      D D D D     E E E E"
+        "D D D D      D D D D     F F F F"
+        "G G G G      G G G G     F F F F"
+        "G G G G      G G G G     H H H H"
+        "G G G G      G G G G     H H H H"
+        "I I I I      I I J J     J J J J"
+        "I I I I      I I J J     J J J J"
+        "K K K L      L L J J     J J J J"
+        "K K K L      L L J J     J J J J"
+        "M M M M      M M M M     N N N N"
+        "M M M M      M M M M     N N N N"
+        "O O O O      P P P P     N N N N"
+        "O O O O      P P P P     N N N N"
+        "O O O O      Q Q Q Q     N N N N"
+        "O O O O      Q Q Q Q     N N N N";
+}
+
+.box_1 {
+    grid-area: A;
+    background: rebeccapurple;
+}
+
+.box_2 {
+    grid-area: B;
+    background: rebeccapurple;
+}
+
+.box_3 {
+    grid-area: C;
+    background: rebeccapurple;
+}
+
+.box_4 {
+    grid-area: D;
+    background: bisque;
+}
+
+.box_5 {
+    grid-area: E;
+    background: beige;
+}
+
+.box_6 {
+    grid-area: F;
+    background: lightgoldenrodyellow;
+}
+
+.box_7 {
+    grid-area: G;
+    background: bisque;
+}
+
+.box_8 {
+    grid-area: H;
+    background: beige;
+}
+
+.box_9 {
+    grid-area: I;
+    background: lightcyan;
+}
+
+.box_10 {
+    grid-area: J;
+    background: lightskyblue;
+}
+
+.box_11 {
+    grid-area: K;
+    background: lightpink;
+}
+
+.box_12 {
+    grid-area: L;
+    background: lightpink;
+}
+
+.box_13 {
+    grid-area: M;
+    background: orange;
+}
+
+.box_14 {
+    grid-area: N;
+    background: orangered;
+}
+
+.box_15 {
+    grid-area: O;
+    background: orangered;
+}
+
+.box_16 {
+    grid-area: P;
+    background: orchid;
+}
+
+.box_17 {
+    grid-area: Q;
+    background: orchid;
+}
+
+
+.home_grid {
+    background: grey;
+}
+
+.button_left {
+    padding: 15px 0;
+    width: 150px;
+    text-align: center;
+    /* outline: 2px solid green; */
+    background: lightpink;
+    float: left;
+    border-radius: 3px;
+}
+
+.button_right {
+    padding: 15px 0;
+    /* outline: 2px solid green; */
+    background: lightpink;
+    float: right;
+    border-radius: 3px;
+}
+
+
+/* LESSON_9 */
+.main_block {
+
+    position: relative;
+    display: inline-block
+}
+
+.text {
+    position: absolute;
+    visibility: hidden;
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    top: 50%;
+    margin-top: -15px;
+
+    /* left: 50%; */
+}
+
+.menu {
+    border: 3px solid #2b8dc7;
+    background: linear-gradient(270deg, #A5DEFF 0%, #FCFEFF 100%);
+    width: 150px;
+    min-height: 225px;
+    position: fixed;
+    left: 0;
+    /* left: 50px; */
+    top: 50%;
+    margin-top: -117px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+}
+
+.main_block:hover .text {
+    background: green;
+    color: red;
+    font-size: 30px;
+    visibility: visible;
+}
+
